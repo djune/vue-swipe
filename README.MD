@@ -1,64 +1,28 @@
-# Overview
+### Overview
 
 vue-swipe is a touch slider for vue.js.
 
-# Install
+forked from [ElemeFE/vue-swipe](https://github.com/ElemeFE/vue-swipe)
+
+* support ssr
+* fix defaultIndex
+* support mouse event
+* ...
+
+### Install
 
 ```bash
-$ npm install vue-swipe
+$ npm install vue-slidex
 ```
-
-# Install
 
 ## Import using module
-Import components to your project:
-
-```JavaScript
-require('vue-swipe/dist/vue-swipe.css');
-
-// in ES6 modules
-import { Swipe, SwipeItem } from 'vue-swipe';
-
-// in CommonJS
-const { Swipe, SwipeItem } = require('vue-swipe');
-
-// in Global variable
-const { Swipe, SwipeItem } = VueSwipe;
+import { Swipe, SwipeItem } from 'vue-slidex';
 ```
 
-And register components:
-
-```javascript
-Vue.component('swipe', Swipe);
-Vue.component('swipe-item', SwipeItem);
-```
-
-## Import using script tag
-
-``` HTML
-<link rel="stylesheet" href="../node-modules/vue-swipe/dist/vue-swipe.css" charset="utf-8">
-<script src="../node-modules/vue-swipe/dist/vue-swipe.js"></script>
-```
-
-```JavaScript
-const vueSwipe = VueSwipe.Swipe;
-const vueSwipeItem = VueSwipe.SwipeItem;
-
-new Vue({
-  el: 'body',
-  components: {
-    'swipe': vueSwipe,
-    'swipe-item': vueSwipeItem
-  }
-});
-```
-
-# Usage
-
-Work on a Vue instance:
+### Usage
 
 ```HTML
-<swipe class="my-swipe">
+<swipe class="my-swipe" :auto="3000" :defaultIndex="2">
   <swipe-item class="slide1"></swipe-item>
   <swipe-item class="slide2"></swipe-item>
   <swipe-item class="slide3"></swipe-item>
@@ -67,53 +31,56 @@ Work on a Vue instance:
 
 ```CSS
 .my-swipe {
-  height: 200px;
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
-}
+        height: 200px;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .mint-swipe-items-wrap
+        overflow: hidden;
+        position: relative;
+        height: 200px
+    .slide1 {
+        background-color: #0089dc;
+        color: #fff;
+    }
 
-.slide1 {
-  background-color: #0089dc;
-  color: #fff;
-}
+    .slide2 {
+        background-color: #ffd705;
+        color: #000;
+    }
 
-.slide2 {
-  background-color: #ffd705;
-  color: #000;
-}
-
-.slide3 {
-  background-color: #ff2d4b;
-  color: #fff;
-}
+    .slide3 {
+        background-color: #ff2d4b;
+        color: #fff;
+    }
+    .mint-swipe-item
+        height 200px
+        display inline-block
+        width 100%
+    .mint-swipe
+        height 200px
+    .slide
+        display block
+        z-index -1
+    .mint-swipe-items-wrap > div
+        display block
+    .slide.is-active
+        height 100%
+        width 90%
+        z-index 100
+        margin-left 5%
+        border-radius 10px
+    .slide.before-active
+        transform translateX(-10%)
+        height 80%
+        margin-top 5%
+        z-index -100
+    .slide.after-active
+        transform translateX(90%)
+        height 80%
+        margin-top 5%
+        z-index -100
 ```
-
-# Options
-
-Here list Props on swipe component
-
-| Option | Description |
-| ----- | ----- |
-| speed | Number(default: 300) speed of animation. |
-| auto | Number(default: 3000) delay of auto slide. |
-| continuous | Boolean (default:true) - creates an infinite slider without endpoints |
-| showIndicators | Boolean (default:true) - show indicators on slider bottom. |
-| prevent | Boolean (default:false) - preventDefault when touch start, useful for some lower version Android Browser(4.2 etc). |
-
-# Develop
-
-Coding with watching and hot-reload.
-
-```bash
-$ npm run dev
-```
-
-Develop on real remote device.
-
-```bash
-$ npm run remote-dev {{ YOUR IP ADDRESS }}
-```
-
-# License
-MIT

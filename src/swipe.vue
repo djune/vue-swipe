@@ -187,6 +187,7 @@
                         if (callback) {
                             callback.apply(this, arguments);
                         }
+                        //this.$emit('animateEnd', element)
                     };
 
                     if (document.addEventListener) {
@@ -221,6 +222,7 @@
 
                 this.setActiveClass(this.index, pages.length);
                 this.pages = pages;
+                this.$emit('animateEnd', pages[this.index], null)
             },
 
             setActiveClass(index, pageCount) {
@@ -318,6 +320,8 @@
                     if (nextPage) {
                         nextPage.style.display = '';
                     }
+
+                    this.$emit('animateEnd', newPage, oldPage)
                 };
 
                 setTimeout(() => {

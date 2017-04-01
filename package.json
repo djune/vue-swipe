@@ -1,6 +1,6 @@
 {
-  "name": "vue-swipe",
-  "version": "2.0.2",
+  "name": "vue-slidex",
+  "version": "1.0.1",
   "description": "A touch slider for vue.js.",
   "main": "dist/vue-swipe.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ElemeFE/vue-swipe.git"
+    "url": "https://github.com/pgroot/vue-swipe.git"
   },
   "babel": {
     "presets": [
@@ -23,7 +23,7 @@
     "slider",
     "vue"
   ],
-  "author": "long.zhang@ele.me",
+  "author": "pgroot",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.3.15",
@@ -42,11 +42,11 @@
     "vue-hot-reload-api": "^1.2.2",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "10.0.2",
-    "vue-template-compiler": "^2.1.8",
+    "vue-template-compiler": "2.1.8",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
-    "wind-dom": "0.0.3"
+    
   }
 }
