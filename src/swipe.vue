@@ -181,7 +181,8 @@
                         element.style.webkitTransition = '';
                         element.style.webkitTransform = '';
                         for (let i in this.pages) {
-                            this.pages[i].style = "";
+                            this.pages[i].style.webkitTransition = "";
+                            this.pages[i].style.webkitTransform = "";
                         }
                         if (callback) {
                             callback.apply(this, arguments);
