@@ -1,6 +1,6 @@
 {
   "name": "vue-slidex",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A touch slider for vue.js.",
   "main": "dist/vue-swipe.js",
   "scripts": {

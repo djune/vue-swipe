@@ -226,6 +226,7 @@
             },
 
             setActiveClass(index, pageCount) {
+            	if(this.$children < 1) return;
                 for (let i in this.$children) {
                     removeClass(this.$children[i].$el, 'before-active')
                     removeClass(this.$children[i].$el, 'after-active')
